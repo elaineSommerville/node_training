@@ -1,10 +1,7 @@
+//include the fs module 
 const fs = require("fs");
 
-fs.readdir("./", function (err, files) {
-  if (err) {
-    throw err;
-  }
-  console.log(files);
-});
+//read the readme file and use the UTF-8 encoding 
+let ipsum = fs.readFileSync("./readme.md", "utf-8");
 
-console.log("reading files...");
+console.log(ipsum);

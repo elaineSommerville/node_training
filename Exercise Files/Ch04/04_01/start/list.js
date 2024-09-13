@@ -15,4 +15,6 @@ fs.readdir("./", function (err, files) {
     //print the files 
     console.log(files); 
 });
+//this is printed out first, then the files list will be seen after
+console.log("reding files ...");
 

@@ -10,5 +10,5 @@ const fs = require("fs");
 fs.readFile("./readme.md", "utf-8", (err, ipsum) => {
   console.log(ipsum);
 });
-
+//this message will print out first as we dont wait for the text to be read out!!! 
 console.log("reading the file ...");

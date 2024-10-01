@@ -1,10 +1,14 @@
+//include the fs module 
 const fs = require("fs");
 
-fs.readdir("./", function (err, files) {
-  if (err) {
-    throw err;
-  }
-  console.log(files);
-});
+//read the readme file and use the UTF-8 encoding 
+//let ipsum = fs.readFileSync("./readme.md", "utf-8");
 
-console.log("reading files...");
+//another way to do what we've just done on line 5
+//non-blocking version
+//this time we also pass in an error
+fs.readFile("./readme.md", "utf-8", (err, ipsum) => {
+  console.log(ipsum);
+});
+//this message will print out first as we dont wait for the text to be read out!!! 
+console.log("reading the file ...");
